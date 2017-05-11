@@ -23,6 +23,6 @@ public class Vote {
     @Setter @Getter private String name;
 
     @Column(name = "count")
-    @Setter @Getter private Integer count;
+    @Setter @Getter private Integer count = 0;
 
 }

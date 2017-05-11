@@ -22,7 +22,7 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... arg0) throws Exception {
-        insertPoll();
+//        insertPoll();
     }
 
     private void insertPoll() {
@@ -39,6 +39,8 @@ public class DataInitializer implements CommandLineRunner {
 
         System.out.println(poll);
         pollRepository.save(poll);
+
+
     }
 
 

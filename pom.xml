@@ -84,6 +84,11 @@
             <optional>true</optional> <!-- Dependency will not pass through 表示依赖不会传递 -->
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
