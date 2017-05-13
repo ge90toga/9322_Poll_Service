@@ -20,4 +20,14 @@ public class PollDTO {
 
     @Setter @Getter List<String> pollOptions;
 
+    @Override
+    public String toString() {
+        return "PollDTO{" +
+                "jobID='" + jobID + '\'' +
+                ", applicationIDs=" + applicationIDs +
+                ", applicantIDs=" + applicantIDs +
+                ", title='" + title + '\'' +
+                ", pollOptions=" + pollOptions +
+                '}';
+    }
 }
