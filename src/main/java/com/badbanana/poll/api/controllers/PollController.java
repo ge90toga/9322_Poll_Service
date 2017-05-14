@@ -54,7 +54,7 @@ public class PollController {
     @RequestMapping(value = "/api/poll/{identity}", method = RequestMethod.GET)
     public ResponseEntity<?> getPollAPI(@PathVariable String identity) {
         Poll poll = pollRepository.findByIdentity(identity);
-        return new ResponseEntity<>(poll, HttpStatus.CREATED);
+        return new ResponseEntity<>(poll, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/poll/{identity}", method = RequestMethod.GET)
