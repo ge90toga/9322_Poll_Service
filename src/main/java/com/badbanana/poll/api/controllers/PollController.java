@@ -35,7 +35,7 @@ public class PollController {
         poll.setTitle(pollDTO.getTitle());
         List<Vote> votes = new ArrayList<>();
 
-        System.out.println("pollDTO" + pollDTO);
+//        System.out.println("pollDTO" + pollDTO);
         for (String option : pollDTO.getPollOptions()) {
             Vote vote = new Vote();
             vote.setName(option);
