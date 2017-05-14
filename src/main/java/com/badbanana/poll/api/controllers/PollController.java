@@ -44,7 +44,7 @@ public class PollController {
         pollRepository.save(poll);
 
         String shortURL = request.getScheme() +"://" + request.getServerName()  + ":" +request.getServerPort()
-                + "/api/poll/" + identity;
+                + "/poll/" + identity;
 
         return new ResponseEntity<>(shortURL, HttpStatus.CREATED);
     }
