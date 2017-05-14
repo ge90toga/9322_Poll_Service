@@ -35,7 +35,6 @@ public class PollController {
         poll.setTitle(pollDTO.getTitle());
         List<Vote> votes = new ArrayList<>();
 
-//        System.out.println("pollDTO" + pollDTO);
         for (String option : pollDTO.getPollOptions()) {
             Vote vote = new Vote();
             vote.setName(option);
@@ -59,9 +58,10 @@ public class PollController {
 
     @RequestMapping(value = "/poll/{identity}", method = RequestMethod.GET)
     public String getPollPage(@PathVariable String identity, Model model) {
-        Poll poll = pollRepository.findByIdentity(identity);
-        model.addAttribute("poll", poll);
-        return "poll";
+//        Poll poll = pollRepository.findByIdentity(identity);
+//        model.addAttribute("poll", poll);
+//        return "poll";
+        return "redirect:/index.html#/" + identity;
     }
 
 }
