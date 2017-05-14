@@ -1,0 +1,28 @@
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">Found IT</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="page-header">Poll of "{{data.poll.title}}"</h4>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item justify-content-between" ng-repeat="vote in data.poll.votes">
+                            {{vote.name}}
+                            <span ng-if="!data.voted" ng-click="votefor($index)" class="badge badge-default badge-pill">Click to vote!</span>
+                            <span class="badge badge-default badge-pill">{{vote.count}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
