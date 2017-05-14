@@ -50,6 +50,13 @@ public class PollController {
     }
 
     @ResponseBody
+    @RequestMapping(value = "/api/poll", method = RequestMethod.PUT)
+    public ResponseEntity<?> updatePoll(@RequestBody Poll poll) {
+        pollRepository.save(poll);
+        return new ResponseEntity<>(poll, HttpStatus.OK);
+    }
+
+    @ResponseBody
     @RequestMapping(value = "/api/poll/{identity}", method = RequestMethod.GET)
     public ResponseEntity<?> getPollAPI(@PathVariable String identity) {
         Poll poll = pollRepository.findByIdentity(identity);
@@ -58,9 +65,6 @@ public class PollController {
 
     @RequestMapping(value = "/poll/{identity}", method = RequestMethod.GET)
     public String getPollPage(@PathVariable String identity, Model model) {
-//        Poll poll = pollRepository.findByIdentity(identity);
-//        model.addAttribute("poll", poll);
-//        return "poll";
         return "redirect:/index.html#/" + identity;
     }
 

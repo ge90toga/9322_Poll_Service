@@ -31,21 +31,21 @@ public class IdentityGenerator {
 
     }
 
-    public static void main(String args[]) {
-        byte[] bytes = new byte[8];
-        Random random = new Random();
-        HashSet<String> hash = new HashSet<>();
-        for (int j = 0; j < 1; j++) {
-            hash.clear();
-            for (int i = 0; i < 10; i++) {
-
-                String s = generateShortUUID();
-                if (hash.contains(s)) {
-                    System.out.println("found repeat:" + i);
-                    break;
-                }
-                hash.add(s);
-            }
-        }
-    }
+//    public static void main(String args[]) {
+//        byte[] bytes = new byte[8];
+//        Random random = new Random();
+//        HashSet<String> hash = new HashSet<>();
+//        for (int j = 0; j < 1; j++) {
+//            hash.clear();
+//            for (int i = 0; i < 10; i++) {
+//
+//                String s = generateShortUUID();
+//                if (hash.contains(s)) {
+//                    System.out.println("found repeat:" + i);
+//                    break;
+//                }
+//                hash.add(s);
+//            }
+//        }
+//    }
 }
