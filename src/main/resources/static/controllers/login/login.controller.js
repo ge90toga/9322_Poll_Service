@@ -2,7 +2,7 @@ foundITApp.controller('loginController', function ($scope, $location, toaster, $
     $scope.init = function () {
         console.log('pollid', $routeParams.pollID);
         $scope.data = {
-            baseUrl: 'http://localhost:8200/',
+            baseUrl: 'http://192.168.99.100:8200/',
             poll: {},
             voted: false
         };
