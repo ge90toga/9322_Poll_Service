@@ -22,7 +22,7 @@ public class VoteController {
     private PollRepository pollRepository;
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Poll> addNewJob(@RequestParam(value = "identity", required = true) String identity,
+    public ResponseEntity<Poll> addVote(@RequestParam(value = "identity", required = true) String identity,
                                             @RequestParam(value = "voteName", required = true) String voteName)  {
         Poll poll = pollRepository.findByIdentity(identity);
         for (Vote vote : poll.getVotes()) {
